@@ -34,7 +34,6 @@ const register=async(req,res)=>{
             return res.status(400).json({
                 status: 400,
                 message: 'Los campos de contraseñas no coinciden',
-                data: userObj
             });
         }
     }
@@ -44,18 +43,14 @@ const register=async(req,res)=>{
             return res.status(400).json({
                 status:400,
                 message: 'Errores de validación',
-                data:{
-                    errors: validations
-                }
+                errors: validations
             });
         }
         else{
             return res.status(500).json({
                 status: 500,
                 message: 'Error en el servidor',
-                data:{
-                    errors: error
-                }
+                errors: error
             });
         }
     }
@@ -70,7 +65,6 @@ const login=async(req,res)=>{
                 return res.status(401).json({
                     status: 401,
                     message: 'Error en el usuario o contraseña',
-                    data: req.body
                 });
             }
             let paiload={
@@ -81,9 +75,7 @@ const login=async(req,res)=>{
         res.status(200).json({
             status: 200,
             message: 'Se inició sesión',
-            data:{
-                token: token
-            }
+            token: token
         });
         }
     }
@@ -93,18 +85,14 @@ const login=async(req,res)=>{
             return res.status(400).json({
                 status:400,
                 message: 'Errores de validación',
-                data:{
-                    errors: validations
-                }
+                errors: validations
             });
         }
         else{
             return res.status(500).json({
                 status: 500,
                 message: 'Error en el servidor',
-                data:{
-                    errors: error
-                }
+                errors: error
             });
         }
     }

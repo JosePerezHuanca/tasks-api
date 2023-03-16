@@ -9,9 +9,7 @@ const read=async(req,res)=>{
             res.status(200).json({
                 status:200,
                 message: 'Ok',
-                data:{
-                    tasks: query
-                }
+                data: query
             });
         }
         else{
@@ -25,9 +23,7 @@ const read=async(req,res)=>{
         res.status(500).json({
             status: 500,
             message: 'Error en el servidor',
-            data:{
-                errors: error
-            }
+            errors: error
         });
     }
 }
@@ -41,9 +37,7 @@ const readOne=async(req,res)=>{
             res.status(200).json({
                 status: 200,
                 message: 'okk',
-                data:{
-                    task: query
-                }
+                data: query
             });
         }
         else{
@@ -57,9 +51,7 @@ const readOne=async(req,res)=>{
         res.status(500).json({
             status: 500,
             message: 'Error en el servidor',
-            data:{
-                errors: error
-            }
+            errors: error
         });
     }
 }
@@ -72,7 +64,7 @@ const add=async(req,res)=>{
         res.status(201).json({
             status: 201,
             message: 'Tarea creada',
-            data: req.body
+            data: taskObj
         });
     }
     catch(error){
@@ -81,18 +73,14 @@ const add=async(req,res)=>{
             return res.status(400).json({
                 status:400,
                 message: 'Errores de validación',
-                data:{
-                    errors: validations
-                }
+                errors: validations
             });
         }
         else{
             return res.status(500).json({
                 status: 500,
                 message: 'Error en el servidor',
-                data:{
-                    errors: error
-                }
+                errors: error
             });
         }
     }
@@ -125,7 +113,8 @@ const update=async(req,res)=>{
         await query.update(taskObj);
         res.status(200).json({
             status: 200,
-            message: 'Tarea actualizada'
+            message: 'Tarea actualizada',
+            data: taskObj
         });
     }
     catch(error){
@@ -137,18 +126,14 @@ const update=async(req,res)=>{
             return res.status(400).json({
                 status: 400,
                 message: 'Error en las validaciones',
-                data:{
-                    errors: validations
-                }
+                errors: validations
             })
         }
         else{
             return res.status(500).json({
                 status: 500,
                 message: 'Error en el servidor',
-                data:{
-                    errors: error
-                }
+                errors: error
             })
         }
     }
@@ -180,16 +165,14 @@ const remove=async(req,res)=>{
         await query.destroy({where: {id:id}});
         res.status(200).json({
             status: 200,
-            message: 'Tarea eliminada'
+            message: 'Tarea eliminada',
         });
     }
     catch(error){
         res.status(500).json({
             status: 500,
             message: 'Error en el servidor',
-            data:{
-                errors: error
-            }
+            errors: error
         });
     }
 }
