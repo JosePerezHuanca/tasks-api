@@ -56,19 +56,19 @@ Ahora, el endpoint /tasks acepta las solicitudes con el verbo get,post,put y del
 ### Obtener tareas ###
 
 /tasks lista todas las tareas.
-respuestas: 200, 403 y 500
-/tasks/:id debuelve una tarea con el id especificado. Por ejemplo: /tasks/7
-respuestas: 200, 403, 404 y 500.
+Respuestas: 200, 403 y 500.
+/tasks/:id debuelve una tarea con el id especificado. Por ejemplo: /tasks/7.
+Respuestas: 200, 403, 404 y 500.
 
 ### Agregar una tarea ###
 
-El cuerpo deve incluir las siguientes propiedades: title y description
-respuestas: 201, 400 y 500.
+El cuerpo deve incluir las siguientes propiedades: title y description.
+Respuestas: 201, 400 y 500.
 
 ### Actualizar o eliminar tarea ###
 
-Para actualizar o borrar una tarea la ruta es /tasks/:id . Por ejemplo: /tasks/5
-respuestas: 200, 400,403,404 y 500.
+Para actualizar o borrar una tarea la ruta es /tasks/:id . Por ejemplo: /tasks/5.
+Respuestas: 200, 400,403,404 y 500.
 
 
 ## Nota final ##
