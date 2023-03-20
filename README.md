@@ -12,7 +12,7 @@ Este proyecto es una API para gestionar tareas. Permite registrar, obtener, actu
 Para ejecutar el proyecto se necesita tener instalado:
 - nodeJs
 - MYSql, ya sea solo el motor o un software como XAMPP o wamp server.
-- sequelize cli. Para generar la base de datos junto con las tablas
+- sequelize cli. Para generar la base de datos y las tablas
 - postman o cualquier cliente http para las pruevas
 
 1. Clonar el repositorio
