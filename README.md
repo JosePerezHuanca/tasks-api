@@ -68,7 +68,7 @@ Respuestas: 201, 400 y 500.
 ### Actualizar o eliminar tarea ###
 
 Para actualizar o borrar una tarea la ruta es /tasks/:id . Por ejemplo: /tasks/5.
-Respuestas: 200, 400,403,404 y 500.
+Respuestas: 200, 400, 403, 404 y 500.
 
 
 ## Nota final ##
