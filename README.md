@@ -73,5 +73,5 @@ Respuestas: 200, 400, 403, 404 y 500.
 
 ## Nota final ##
 
-El proyecto se subió a render.com con fines de prueva. Cabe recalcar que puede aver un poco de retardo en las solicitudes ya sea por el host de la API o el de la base de datos  
+El proyecto se subió a render.com con fines de prueva. Cabe recalcar que al ser un host gratuito puede haber un poco de retardo la primera vez (aproximadamente un minuto) ya que luego de cierta cantidad de tiempo sin recivir peticiones el servicio se suspende.  
 [Link al proyecto desplegado](https://tasks-api-agws.onrender.com/)
